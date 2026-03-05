@@ -1,18 +1,9 @@
-#!/bin/bash
+echo "Enter Principal:"
+read p
+echo "Enter Rate:"
+read r
+echo "Enter Time:"
+read t
 
-# Simple Interest Calculator
-
-echo "Simple Interest Calculator"
-
-echo "Enter Principal Amount:"
-read principal
-
-echo "Enter Rate of Interest:"
-read rate
-
-echo "Enter Time (in years):"
-read time
-
-simple_interest=$(echo "($principal * $rate * $time) / 100" | bc)
-
-echo "Simple Interest is: $simple_interest"
+si=$((p*r*t/100))
+echo "Simple Interest is $si"
